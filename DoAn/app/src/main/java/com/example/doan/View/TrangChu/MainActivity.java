@@ -16,6 +16,8 @@ import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
@@ -37,13 +39,18 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.trangchu_layout);
 
+        appBarLayout = findViewById(R.id.appbar);
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpager);
         drawerLayout = findViewById(R.id.drawerLayout);
 
-        appBarLayout = findViewById(R.id.appbar);
+        ActionBar actionBar = getSupportActionBar();
+
+
+
         appBarLayout.addOnOffsetChangedListener(this);
         collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
 
@@ -54,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     @Override
