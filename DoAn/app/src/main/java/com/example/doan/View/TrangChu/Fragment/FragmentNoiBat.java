@@ -1,29 +1,28 @@
-package com.checongbinh.lazada.View.TrangChu.Fragment;
+package com.example.doan.View.TrangChu.Fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.checongbinh.lazada.Adapter.AdapterNoiBat;
-import com.checongbinh.lazada.R;
+import com.example.doan.Adapter.AdapterNoiBat;
+import com.example.doan.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Lenovo S410p on 6/23/2016.
- */
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 public class FragmentNoiBat extends Fragment {
     RecyclerView recyclerView;
     AdapterNoiBat adapterNoiBat;
 
 
     @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_noibat,container,false);
@@ -32,7 +31,7 @@ public class FragmentNoiBat extends Fragment {
         List<String> dulieu = new ArrayList<>();
 
 
-        for (int i=0 ;i<50;i++){
+        for (int i=0 ;i<100;i++){
             String ten = " Noi bat " + i;
             dulieu.add(ten);
         }

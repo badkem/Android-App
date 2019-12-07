@@ -1,19 +1,17 @@
-package com.checongbinh.lazada.Adapter;
+package com.example.doan.Adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.checongbinh.lazada.R;
+import com.example.doan.R;
 
 import java.util.List;
 
-/**
- * Created by Lenovo S410p on 7/13/2016.
- */
+import androidx.recyclerview.widget.RecyclerView;
+
 public class AdapterNoiBat extends RecyclerView.Adapter<AdapterNoiBat.ViewHolder> {
     Context context;
     List<String> stringList;
