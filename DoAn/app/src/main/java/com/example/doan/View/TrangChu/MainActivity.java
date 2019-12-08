@@ -5,7 +5,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 
 import com.example.doan.Adapter.ViewPagerAdapter;
 import com.example.doan.R;
@@ -18,15 +17,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
+import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener{
+public class MainActivity extends AppCompatActivity {
     AppBarLayout appBarLayout;
     CollapsingToolbarLayout collapsingToolbarLayout;
     Menu menu;
+    Toolbar toolbar;
     TabLayout tabLayout;
     ViewPager viewPager;
     DrawerLayout drawerLayout;
@@ -37,23 +37,23 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.trangchu_layout);
 
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewpager);
         drawerLayout = findViewById(R.id.drawerLayout);
-
         appBarLayout = findViewById(R.id.appbar);
-        appBarLayout.addOnOffsetChangedListener(this);
         collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
 
-        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.Open, R.string.Close);
+        drawerToggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.Open,R.string.Close);
         drawerLayout.addDrawerListener(drawerToggle);
-
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
+
     }
 
     @Override
@@ -70,35 +70,13 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         }
 
         int id = item.getItemId();
-        switch (id){
+        switch (id) {
             case R.id.itDangNhap:
-                    Intent iDangNhap = new Intent(this, DangNhapActivity.class);
-                    startActivity(iDangNhap);
+                Intent iDangNhap = new Intent(this, DangNhapActivity.class);
+                startActivity(iDangNhap);
                 break;
 
         }
         return true;
-    }
-
-    @Override
-    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-        if(collapsingToolbarLayout.getHeight() + verticalOffset <=  1.5 * ViewCompat.getMinimumHeight(collapsingToolbarLayout)){
-            LinearLayout linearLayout = appBarLayout.findViewById(R.id.lnSearch);
-            linearLayout.animate().alpha(0).setDuration(200);
-
-            MenuItem itSearch = menu.findItem(R.id.itSearch);
-            itSearch.setVisible(true);
-
-        }else{
-            LinearLayout linearLayout = appBarLayout.findViewById(R.id.lnSearch);
-            linearLayout.animate().alpha(1).setDuration(200);
-            try{
-                MenuItem itSearch = menu.findItem(R.id.itSearch);
-                itSearch.setVisible(false);
-            }catch (Exception e){
-
-            }
-
-        }
     }
 }
