@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true">
@@ -21,12 +21,15 @@
                 android:layout_height="wrap_content"
                 android:background="@color/bgToolbar"
                 android:fitsSystemWindows="true">
-                
+
+
                 <com.google.android.material.appbar.CollapsingToolbarLayout
                     android:id="@+id/collapsing_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
 
                     <LinearLayout
                         android:id="@+id/lnSearch"
@@ -95,7 +98,7 @@
 
             </FrameLayout>
 
-        </com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </FrameLayout>
 
