@@ -7,13 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 
-import com.example.doan.Adapter.ViewPagerAdapter;
-import com.example.doan.R;
-import com.example.doan.View.DangNhap_DangKy.DangNhapActivity;
-import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.tabs.TabLayout;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,6 +16,13 @@ import androidx.core.view.ViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.example.doan.Adapter.ViewPagerAdapter;
+import com.example.doan.R;
+import com.example.doan.View.DangNhap_DangKy.DangNhapActivity;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOffsetChangedListener {
     AppBarLayout appBarLayout;
@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity implements AppBarLayout.OnOf
         tabLayout.setupWithViewPager(viewPager);
 
         appBarLayout.addOnOffsetChangedListener(this);
-
-
 
     }
 

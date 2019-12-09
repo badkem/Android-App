@@ -22,21 +22,18 @@
                 android:background="@color/bgToolbar"
                 android:fitsSystemWindows="true">
 
-
                 <com.google.android.material.appbar.CollapsingToolbarLayout
                     android:id="@+id/collapsing_toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
 
-
-
                     <LinearLayout
                         android:id="@+id/lnSearch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="80dp"
+                        android:layout_marginTop="40dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/bgsearch"
                         android:orientation="horizontal"

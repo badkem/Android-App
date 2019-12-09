@@ -4,53 +4,65 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
+
+import com.example.doan.Model.ObjectClass.Data_NoiBat;
 import com.example.doan.R;
 
 import java.util.List;
 
-import androidx.recyclerview.widget.RecyclerView;
-
 public class AdapterNoiBat extends RecyclerView.Adapter<AdapterNoiBat.ViewHolder> {
-    Context context;
-    List<String> stringList;
 
-    public AdapterNoiBat(Context context,List<String> stringList){
-        this.context = context;
-        this.stringList = stringList;
-    }
-
-    //Chạy thứ 2
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
+        CardView cardviewNoiBat;
+        ImageView photo_NoiBat;
+        TextView txtTieuDeNoiBat;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.txtTieuDeNoiBat);
+            cardviewNoiBat = itemView.findViewById(R.id.cardviewNoiBat);
+            photo_NoiBat = itemView.findViewById(R.id.photo_NoiBat);
+            txtTieuDeNoiBat = itemView.findViewById(R.id.txtTieuDeNoiBat);
+
         }
     }
 
-    //Chạy đầu tiên
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.custom_recyclerview_noibat,parent,false);
+    private List<Data_NoiBat> dataNoiBatList;
+    private Context context;
 
-        ViewHolder viewHolder = new ViewHolder(view);
-        return viewHolder;
+    public AdapterNoiBat(Context context, List<Data_NoiBat> dataNoiBatList) {
+        this.dataNoiBatList = dataNoiBatList;
+        this.context = context;
     }
 
-    //Chay thứ 3
+    @NonNull
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.textView.setText(stringList.get(position));
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_recyclerview_noibat, parent, false);
+        ViewHolder pvh = new ViewHolder(v);
+        return pvh;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Data_NoiBat dataNoiBat = dataNoiBatList.get(position);
+        holder.txtTieuDeNoiBat.setText(dataNoiBat.getName());
+        holder.photo_NoiBat.setImageResource(dataNoiBat.getId_photo());
     }
 
     @Override
     public int getItemCount() {
-        return stringList.size();
+        return dataNoiBatList.size();
     }
 
-
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+    }
 }
