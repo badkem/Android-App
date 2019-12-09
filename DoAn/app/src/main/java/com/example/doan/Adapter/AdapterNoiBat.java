@@ -1,6 +1,7 @@
 package com.example.doan.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,10 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.example.doan.Model.ObjectClass.Data_NoiBat;
 import com.example.doan.R;
+import com.example.doan.View.ChiTietSanPham.ChiTietSanPhamActivity;
 
 import java.util.List;
 
@@ -54,6 +55,14 @@ public class AdapterNoiBat extends RecyclerView.Adapter<AdapterNoiBat.ViewHolder
         Data_NoiBat dataNoiBat = dataNoiBatList.get(position);
         holder.txtTieuDeNoiBat.setText(dataNoiBat.getName());
         holder.photo_NoiBat.setImageResource(dataNoiBat.getId_photo());
+
+        holder.cardviewNoiBat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iChitietsanpham = new Intent(context, ChiTietSanPhamActivity.class);
+                context.startActivity(iChitietsanpham);
+            }
+        });
     }
 
     @Override
