@@ -48,7 +48,7 @@
                             android:background="@drawable/selectorbgsearch"
                             android:drawableLeft="@drawable/ic_search_black_24dp"
                             android:paddingLeft="10dp"
-                            android:text="Tìm kiếm trên Lazada"
+                            android:text="Tìm kiếm"
                             android:textAlignment="viewStart"
                             android:textAllCaps="false"
                             android:textColor="@color/colorGray" />

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">VÉ PHIM ONLINE</string>
+    <string name="txtTen">Họ Và Tên: </string>
+    <string name="diachi">Địa Chỉ: 3 Ngô Thì Sĩ, Phường Phú Bài, Thị Xã Hương Thủy, Huế </string>
+    <string name="cinema">KEM CINEMA</string>
+    <string name="txtSĐT">Điện Thoại: </string>
+    <string name="txtNgàySinh">Email:</string>
+    <string name="editTên"></string>
+    <string name="editSĐT"></string>
+    <string name="editNgàySinh"></string>
+    <string name="txtGiớiTính">Giới Tính</string>
+    <string name="chkNam">Nam</string>
+    <string name="chkNữ">Nữ</string>
+    <string name="txtChọnPhim">PHIM HOT HÔM NAY: </string>
+    <string-array name="chonphim_array">
+        <item>Mắt biếc</item>
+        <item>Chị chị em em</item>
+        <item>Giáng sinh năm ấy</item>
+        <item>Anh trai yêu quái</item>
+        <item>Ford v Ferrari</item>
+        <item>Jumanji</item>
+
+    </string-array>
+    <string name="txtChọnRạp">SỐ LƯỢNG</string>
+    <string-array name="donvi">
+        <item>VND</item>
+        <item>USD</item>
+    </string-array>
+    <string name="txtSốLượngVé">Số Lượng Vé:</string>
+    <string name="editSốLượngVé"></string>
+    <string name="ndanhtraiyeuquai">Câu chuyện về Lâm - vận động viên Judo quốc gia bỗng chốc phải bỏ dở sự nghiệp vì gặp chấn thương mất đi thị giác và Phong - người anh cùng cha khác mẹ đang ở trong tù - ngay lập tức lợi dụng bi kịch của em trai để xin được ân xá về nhà chăm sóc em.</string>
+    <string name="chichiemem">Chị Chị Em Em là một bộ phim tâm lý - giật gân khai thác câu chuyện yêu - hận - tình thù bí ẩn và lôi cuốn xoay quanh hai người phụ nữ xinh đẹp - Thiên Kim và Bảo Nhi</string>
+    <string name="ndgiangsinh">Lấy cảm hứng từ bản tình ca cùng tên của bộ đôi Wham! Bộ phim xây dựng trên bối cảnh Vương quốc Anh vào những đêm Đông dịp Giáng sinh, khoảnh khắc tuyệt nhất trong năm của vùng đất này.</string>
+    <string name="txtĐịaChỉ">Địa Chỉ</string>
+    <string name="ndfordvsferari">Dựa trên những sự kiện có thật, bộ phim xoay quanh cuộc cạnh tranh khốc liệt giữa hai hãng xe Ford và Ferrari tại giải đua đường trường lâu đời nhất thế giới mang tên 24 Hours of Le Mans vào năm 1966.</string>
+    <string name="ndjumanji">Khi những người chơi quay lại, trò chơi đã thay đổi. . Người chơi sẽ phải dũng cảm đối mặt với những màn chơi ẩn mật chưa từng được khám phá, từ sa mạc khô cằn đến những ngọn núi tuyết, để tìm thấy lối thoát khỏi trò chơi ảo nguy hiểm nhất thế giới...</string>
+    <string name="matbiec">Đạo diễn Victor Vũ trở lại với một tác phẩm chuyển thể từ truyện ngắn cùng tên nổi tiếng của nhà văn Nguyễn Nhật Ánh: Mắt Biếc. Phim kể về chuyện tình đơn phương của chàng thanh niên Ngạn dành cho cô bạn từ thuở nhỏ Hà Lan...</string>
+</resources>

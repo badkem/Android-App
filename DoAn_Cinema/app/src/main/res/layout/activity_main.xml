@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scorr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/cardview_light_background"
+    android:focusableInTouchMode="false"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/bglogo" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="411dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tranparentBlack"
+                    android:text="Phim đang chiếu"
+                    android:textAlignment="center"
+                    android:textColor="#FF0000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aladdin"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="21dp"
+                android:background="@color/tranparentBlack"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/anhtraiyeuquai"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/matbiec" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:text="Mắt biếc"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btmatbiec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:text="Xem chi tiết"
+                    android:textColor="#FF0000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thucung"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/tranparentBlack"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/anhtraiyeuquai">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/jumanji" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:text="JUMANJI:
+                    The next level"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btjumanji"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:text="Xem chi tiết"
+                    android:textColor="#FF0000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/anhtraiyeuquai"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:background="@color/tranparentBlack"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/anhtraiyeuquai" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Anh trai yêu quái"
+                    android:textColor="@color/colorWhite"
+                    android:textAlignment="center"
+                    android:textSize="16dp" />
+
+                <Button
+                    android:id="@+id/btanhtraiyeuquai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:text="Xem chi tiết"
+                    android:textColor="#FF0000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/doraemon"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="21dp"
+                android:background="@color/tranparentBlack"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/aladdin"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/chichiemem" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:text="Chị chị em em"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btchichiemem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:text="Xem chi tiết"
+                    android:textColor="#FF0000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spiderman"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/tranparentBlack"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/pokemon"
+                app:layout_constraintTop_toBottomOf="@+id/doraemon">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:srcCompat="@drawable/fordvsferrari" />
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:text="Ford v Ferrari"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btfordvsferrari"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#CC000000"
+                    android:text="Xem chi tiết"
+                    android:textColor="#FF0000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pokemon"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="14dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/tranparentBlack"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/thucung"
+                app:layout_constraintTop_toBottomOf="@+id/aladdin">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="152dp"
+                    app:srcCompat="@drawable/giangsinhnamay" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:text="Giáng sinh năm ấy"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btgiangsinhnamay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#CC000000"
+                    android:text="Xem chi tiết"
+                    android:textColor="#FF0000" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
