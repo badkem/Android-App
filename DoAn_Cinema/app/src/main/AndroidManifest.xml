@@ -20,6 +20,15 @@
         <activity android:name="com.kem.DoAn_Cinema.trangchu" />
         <activity android:name="com.kem.DoAn_Cinema.MainActivity">
             <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ManHinhChaoActivity"
+            android:theme="@style/SplashscreenTheme">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
